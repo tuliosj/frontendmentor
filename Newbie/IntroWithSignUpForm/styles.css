@@ -2,8 +2,10 @@
 :root {
   --red: hsl(0, 100%, 74%);
   --green: hsl(154, 59%, 51%);
+  --green-alpha: hsla(154, 59%, 51%, 0.25);
   --blue: hsl(248, 32%, 49%);
   --dark-blue: hsl(249, 10%, 26%);
+  --dark-blue-alpha: hsla(249, 10%, 26%, 0.25);
   --grayish-blue: hsl(246, 25%, 77%);
 }
 
@@ -14,6 +16,7 @@ html {
 
 body {
   background-color: var(--red);
+  background-image: url("./images/bg-intro-desktop.png");
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   margin: 0;
@@ -41,44 +44,68 @@ body {
   flex-direction: column;
   justify-content: center;
 
-  max-width: 500px;
+  margin: 0 24px;
 }
 
 footer {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  color: #fff;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--blue);
 }
 
 /* Descriptive Text */
 
 .description {
   color: #fff;
+  max-width: 500px;
 }
 
 h1 {
   font-weight: 700;
+  font-size: 48px;
+  margin: 16px 0;
 }
 
 p {
   font-weight: 500;
+  margin: 8px 0;
 }
 
-/* Form */
+/* Form column */
 
-.form {
+.form-column {
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 
-.form > * {
+.form-column > * {
   margin: 8px 0;
   border-radius: 8px;
+  box-shadow: 0 4px var(--dark-blue-alpha);
 }
 
 .try-it {
   background-color: var(--blue);
+  padding: 12px;
+  text-align: center;
+}
+
+.try-it a {
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
 }
 
 /* Card */
@@ -88,14 +115,71 @@ p {
   padding: 8px;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+form > * {
+  margin: 8px;
+}
+
+input {
+  min-height: 24px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid var(--dark-blue-alpha);
+
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: var(--dark-blue);
+  caret-color: var(--blue);
+}
+
+input:focus {
+  border: 1px solid var(--blue);
+  outline: none;
+}
+
+button {
+  background-color: var(--green);
+  padding: 16px;
+
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px -4px var(--dark-blue-alpha) inset;
+
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+
 /* Text Helper */
 
 .helper {
   color: var(--grayish-blue);
+  font-size: 10px;
+  text-align: center;
 }
 
 a {
   font-weight: 600;
   text-decoration: none;
   color: var(--red);
+}
+
+/* Responsiveness */
+
+@media (min-width: 548px) {
+  .form-column {
+    min-width: 500px;
+  }
+}
+@media (max-width: 548px) {
+  .form-column {
+    width: 100vh;
+  }
 }
