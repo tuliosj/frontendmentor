@@ -39,13 +39,12 @@ body {
   flex-grow: 2;
 }
 
-/* remove later */
 .content > * {
   display: flex;
   flex-direction: column;
   justify-content: center;
 
-  margin: 0 24px;
+  margin: 24px;
 }
 
 footer {
@@ -104,7 +103,7 @@ p {
 
 .try-it a {
   color: #fff;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
 }
 
@@ -132,19 +131,24 @@ button:active {
 
 /* Card */
 
-.card {
-  background-color: #fff;
-  padding: 8px;
-}
-
 form {
+  background-color: #fff;
   display: flex;
   flex-direction: column;
-  padding: 16px;
+  padding: 24px;
 }
 
 form > * {
   margin: 8px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group > * {
+  flex-grow: 2;
 }
 
 input {
@@ -162,6 +166,14 @@ input {
 input:focus {
   border: 1px solid var(--blue);
   outline: none;
+}
+
+.invalid-input {
+  margin: 4px;
+
+  color: var(--red);
+  font-size: 12px;
+  text-align: right;
 }
 
 .submit-button {
@@ -202,6 +214,7 @@ a:focus {
 
 /* Responsiveness */
 
+/* card size */
 @media (min-width: 548px) {
   .form-column {
     min-width: 500px;
@@ -210,5 +223,24 @@ a:focus {
 @media (max-width: 548px) {
   .form-column {
     width: 100vh;
+  }
+}
+
+/* vertical mode */
+@media (max-width: 1095px) {
+  body {
+    background-image: url("./images/bg-intro-mobile.png");
+  }
+  .description {
+    text-align: center;
+  }
+  h1 {
+    font-size: 28px;
+  }
+  .try-it {
+    padding: 12px 72px;
+  }
+  form {
+    padding: 8px;
   }
 }

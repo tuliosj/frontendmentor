@@ -37,56 +37,74 @@
           <button class="try-it" onclick="location.href='#'">
             <b>Try it free 7 days</b> then $20/mo. thereafter
           </button>
-          <div class="card">
-            <form action="#">
+          <form action="#">
+            <div class="input-group">
               <input
                 type="text"
+                maxlength="100"
                 name="first-name"
                 id="first-name"
                 placeholder="First Name"
+                onblur="validate('first-name')"
                 required
               />
+            </div>
+            <div class="input-group">
               <input
                 type="text"
+                maxlength="100"
                 name="last-name"
                 id="last-name"
                 placeholder="Last Name"
+                onblur="validate('last-name')"
                 required
               />
+            </div>
+            <div class="input-group">
               <input
                 type="email"
+                maxlength="100"
                 name="email"
                 id="email"
                 placeholder="Email Address"
+                onblur="validate('email')"
                 required
               />
+            </div>
+            <div class="input-group">
               <input
                 type="password"
+                maxlength="100"
                 name="password"
                 id="password"
                 placeholder="Password"
+                onblur="validate('password')"
                 required
               />
-              <button class="submit-button" type="submit">
-                Claim your free trial
-              </button>
-              <span class="helper"
-                >By clicking the button, you are agreeing to our
-                <a href="#">Terms and Services</a></span
-              >
-            </form>
-          </div>
+            </div>
+            <button class="submit-button" type="submit">
+              Claim your free trial
+            </button>
+            <span class="helper"
+              >By clicking the button, you are agreeing to our
+              <a href="#">Terms and Services</a></span
+            >
+          </form>
         </div>
       </div>
 
       <footer>
         <p class="attribution">
           Challenge by
-          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          <a
+            href="https://www.frontendmentor.io/challenges/intro-component-with-signup-form-5cf91bd49edda32581d28fd1"
+            target="_blank"
             >Frontend Mentor</a
           >.&nbsp; Coded by <a href="https://github.com/tuliosj">tuliosj</a>.
         </p>
       </footer>
     </div>
   </body>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="./scripts.js"></script>
 </html>
