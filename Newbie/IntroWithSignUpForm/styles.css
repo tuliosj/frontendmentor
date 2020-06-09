@@ -2,8 +2,9 @@
 :root {
   --red: hsl(0, 100%, 74%);
   --green: hsl(154, 59%, 51%);
-  --green-alpha: hsla(154, 59%, 51%, 0.25);
+  --light-green: hsl(154, 59%, 61%);
   --blue: hsl(248, 32%, 49%);
+  --light-blue: hsl(248, 32%, 59%);
   --dark-blue: hsl(249, 10%, 26%);
   --dark-blue-alpha: hsla(249, 10%, 26%, 0.25);
   --grayish-blue: hsl(246, 25%, 77%);
@@ -99,13 +100,34 @@ p {
 .try-it {
   background-color: var(--blue);
   padding: 12px;
-  text-align: center;
 }
 
 .try-it a {
+  color: #fff;
   font-size: 14px;
   font-weight: 400;
+}
+
+.try-it:hover,
+.try-it:focus {
+  background-color: var(--light-blue);
+}
+
+button {
   color: #fff;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  border: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:active {
+  outline: none;
+  transform: translateY(4px);
+  box-shadow: 0px 0px;
 }
 
 /* Card */
@@ -142,19 +164,21 @@ input:focus {
   outline: none;
 }
 
-button {
+.submit-button {
   background-color: var(--green);
   padding: 16px;
 
-  border: none;
   border-radius: 4px;
   box-shadow: 0px -4px var(--dark-blue-alpha) inset;
 
-  font-family: "Poppins", sans-serif;
   font-weight: 600;
   text-align: center;
   text-transform: uppercase;
-  color: #fff;
+}
+
+.submit-button:hover,
+.submit-button:focus {
+  background-color: var(--light-green);
 }
 
 /* Text Helper */
@@ -169,6 +193,11 @@ a {
   font-weight: 600;
   text-decoration: none;
   color: var(--red);
+}
+
+a:focus {
+  outline: none;
+  text-decoration: underline;
 }
 
 /* Responsiveness */
