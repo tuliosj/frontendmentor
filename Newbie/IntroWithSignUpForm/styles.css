@@ -1,0 +1,246 @@
+/* Colors */
+:root {
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --light-green: hsl(154, 59%, 61%);
+  --blue: hsl(248, 32%, 49%);
+  --light-blue: hsl(248, 32%, 59%);
+  --dark-blue: hsl(249, 10%, 26%);
+  --dark-blue-alpha: hsla(249, 10%, 26%, 0.25);
+  --grayish-blue: hsl(246, 25%, 77%);
+}
+
+/* Body */
+html {
+  height: 100vh;
+}
+
+body {
+  background-color: var(--red);
+  background-image: url("./images/bg-intro-desktop.png");
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  flex-grow: 2;
+}
+
+.content > * {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin: 24px;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fff;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--blue);
+}
+
+/* Descriptive Text */
+
+.description {
+  color: #fff;
+  max-width: 500px;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 48px;
+  margin: 16px 0;
+}
+
+p {
+  font-weight: 500;
+  margin: 8px 0;
+}
+
+/* Form column */
+
+.form-column {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.form-column > * {
+  margin: 8px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px var(--dark-blue-alpha);
+}
+
+.try-it {
+  background-color: var(--blue);
+  padding: 12px;
+}
+
+.try-it a {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.try-it:hover,
+.try-it:focus {
+  background-color: var(--light-blue);
+}
+
+button {
+  color: #fff;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  border: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:active {
+  outline: none;
+  transform: translateY(4px);
+  box-shadow: 0px 0px;
+}
+
+/* Card */
+
+form {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+}
+
+form > * {
+  margin: 8px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group > * {
+  flex-grow: 2;
+}
+
+input {
+  min-height: 24px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid var(--dark-blue-alpha);
+
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: var(--dark-blue);
+  caret-color: var(--blue);
+}
+
+input:focus {
+  border: 1px solid var(--blue);
+  outline: none;
+}
+
+.invalid-input {
+  margin: 4px;
+
+  color: var(--red);
+  font-size: 12px;
+  text-align: right;
+}
+
+.submit-button {
+  background-color: var(--green);
+  padding: 16px;
+
+  border-radius: 4px;
+  box-shadow: 0px -4px var(--dark-blue-alpha) inset;
+
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.submit-button:hover,
+.submit-button:focus {
+  background-color: var(--light-green);
+}
+
+/* Text Helper */
+
+.helper {
+  color: var(--grayish-blue);
+  font-size: 10px;
+  text-align: center;
+}
+
+a {
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--red);
+}
+
+a:focus {
+  outline: none;
+  text-decoration: underline;
+}
+
+/* Responsiveness */
+
+/* card size */
+@media (min-width: 548px) {
+  .form-column {
+    min-width: 500px;
+  }
+}
+@media (max-width: 548px) {
+  .form-column {
+    width: 100vh;
+  }
+}
+
+/* vertical mode */
+@media (max-width: 1095px) {
+  body {
+    background-image: url("./images/bg-intro-mobile.png");
+  }
+  .description {
+    text-align: center;
+  }
+  h1 {
+    font-size: 28px;
+  }
+  .try-it {
+    padding: 12px 72px;
+  }
+  form {
+    padding: 8px;
+  }
+}
