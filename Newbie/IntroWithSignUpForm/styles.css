@@ -1,3 +1,101 @@
+/* Colors */
+:root {
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --blue: hsl(248, 32%, 49%);
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+}
+
+/* Body */
+html {
+  height: 100vh;
+}
+
 body {
+  background-color: var(--red);
   font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  flex-grow: 2;
+}
+
+/* remove later */
+.content > * {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  max-width: 500px;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Descriptive Text */
+
+.description {
+  color: #fff;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+p {
+  font-weight: 500;
+}
+
+/* Form */
+
+.form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.form > * {
+  margin: 8px 0;
+  border-radius: 8px;
+}
+
+.try-it {
+  background-color: var(--blue);
+}
+
+/* Card */
+
+.card {
+  background-color: #fff;
+  padding: 8px;
+}
+
+/* Text Helper */
+
+.helper {
+  color: var(--grayish-blue);
+}
+
+a {
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--red);
 }
