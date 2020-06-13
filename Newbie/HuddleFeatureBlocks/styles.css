@@ -19,6 +19,12 @@ body {
 }
 
 h1,
+h2,
+p {
+  max-width: 50rem;
+}
+
+h1,
 h2 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
@@ -106,6 +112,7 @@ main {
 
 .feature-card {
   display: flex;
+  justify-content: space-between;
 
   margin: 2.8rem 0;
   border-radius: 1.6rem;
@@ -113,8 +120,8 @@ main {
   padding: 4rem 2rem;
 }
 
-.feature-card > .left {
-  margin: 0 12rem;
+.feature-card > * {
+  margin: 0 0.8rem;
 }
 
 .feature {
@@ -182,18 +189,60 @@ footer {
   align-content: flex-start;
 }
 
-.contact-item > * {
-  align-self: baseline;
+.contact-svg {
+  margin-block-start: 1.2em;
+  margin-right: 1em;
+  min-width: 20px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: var(--pale-cyan);
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.links > a {
+  margin: 0.8rem 0;
+  font-weight: 400;
+}
+
+.social-medias > a {
+  padding: 1rem;
+  border: 0.1rem solid var(--pale-cyan);
+  border-radius: 50%;
+  text-align: center;
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
 }
 
 .copyright {
   display: flex;
   justify-content: flex-end;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.4rem;
 }
 
 .attribution {
   display: flex;
   justify-content: center;
+}
+
+.attribution > p {
   padding: 0.8rem;
   margin: 0;
+}
+
+@media (max-width: 64em) {
+  main {
+    background-color: red;
+  }
 }
