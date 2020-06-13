@@ -16,9 +16,18 @@ function validate(id) {
   const input = $(`#${id}`);
 
   $(`#${id}-after`).remove();
+  input.removeClass("invalid");
   if (input.val().search(regex[id]) < 0) {
+    input.addClass("invalid");
     input.after(
-      `<em class='invalid-input' id='${id}-after'>${answers[id]}</em>`
+      `<div class='invalid-helper' id='${id}-after'><em>${answers[id]}</em><img src='./images/icon-error.svg' alt='Input Error'/></div>`
     );
   }
 }
+
+$("form").submit(() => {
+  if ($(".invalid").length >= 1) {
+    $(".invalid").first().focus();
+    return false;
+  }
+});
