@@ -1,10 +1,10 @@
 # Front End Challenges - Frontend Mentor
 
+> [Frontend Mentor](https://www.frontendmentor.io) challenges allow you to improve your skills in a real-life workflow.
+
 ## Welcome! 👋
 
 Glad to see you here! These are my takes on the Frontend Mentor challenges so far.
-
-> [Frontend Mentor](https://www.frontendmentor.io) challenges allow you to improve your skills in a real-life workflow.
 
 ## Projects online 🚀
 
