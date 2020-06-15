@@ -1,0 +1,30 @@
+:root {
+  font-size: 62.5%;
+
+  --grad-start: hsl(236, 72%, 79%);
+  --grad-end: hsl(237, 63%, 64%);
+  --very-light-blue: hsl(240, 78%, 98%);
+  --light-blue: hsl(234, 14%, 74%);
+  --blue: hsl(233, 13%, 49%);
+  --dark-blue: hsl(232, 13%, 33%);
+}
+
+html,
+body {
+  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--dark-blue);
+
+  background-color: var(--very-light-blue);
+  background-image: url("./images/bg-top.svg"), url("./images/bg-bottom.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: top right, left bottom;
+}
+
+h1 {
+  margin: 0;
+}
