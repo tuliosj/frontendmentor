@@ -1,8 +1,16 @@
 :root {
   font-size: 62.5%;
 
-  --grad-start: hsl(236, 72%, 79%);
-  --grad-end: hsl(237, 63%, 64%);
+  --grad-buttons: linear-gradient(
+    90deg,
+    hsl(236, 72%, 79%) 0%,
+    hsl(237, 63%, 64%) 100%
+  );
+  --grad-card: linear-gradient(
+    135deg,
+    hsl(236, 72%, 79%) 0%,
+    hsl(237, 63%, 64%) 100%
+  );
   --very-light-blue: hsl(240, 78%, 98%);
   --light-blue: hsl(234, 14%, 74%);
   --blue: hsl(233, 13%, 49%);
@@ -25,6 +33,52 @@ body {
   background-position: top right, left bottom;
 }
 
+button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  background: var(--grad-buttons);
+  color: #fff;
+}
+
+/* Header */
 h1 {
   margin: 0;
+  color: var(--blue);
+}
+
+input[type="checkbox"] {
+  position: relative;
+  -webkit-appearance: none;
+  outline: none;
+  width: 5.5rem;
+  height: 3rem;
+  background: var(--grad-buttons);
+  border-radius: 5rem;
+}
+
+input[type="checkbox"]:after {
+  content: "";
+  position: absolute;
+  top: 0.4rem;
+  right: 0.4rem;
+  background-color: #fff;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  transition: 150ms;
+}
+
+input[type="checkbox"]:checked:after {
+  right: 2.9rem;
+  transition: 150ms;
+}
+
+input[type="checkbox"]:hover {
+  filter: brightness(1.2);
+  cursor: pointer;
+}
+
+#toggle:checked {
 }
