@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Pricing component with toggle</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      const vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty("--vh", `${vh}px`);
+    </script>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <h1>Our Pricing</h1>
+    <div class="toggle-container">
+      <label for="checkbox">Annualy</label>
+      <input type="checkbox" name="toggle" id="toggle" />
+      <label for="checkbox">Monthly</label>
+    </div>
+
+    <div class="card-container">
+      <div class="basic card">
+        <div class="plan">
+          <h2>Basic</h2>
+          <h3 class="monthly">&dollar;19.99</h3>
+          <h3 class="annually" style="display: none;">&dollar;199.99</h3>
+        </div>
+        <ul>
+          <li>500 GB Storage</li>
+          <li>2 Users Allowed</li>
+          <li>Send up to 3 GB</li>
+        </ul>
+        <button>Learn More</button>
+      </div>
+      <div class="pro card">
+        <div class="plan">
+          <h2>Professional</h2>
+          <h3 class="monthly">&dollar;24.99</h3>
+          <h3 class="annually" style="display: none;">&dollar;249.99</h3>
+        </div>
+        <ul>
+          <li>1 TB Storage</li>
+          <li>5 Users Allowed</li>
+          <li>Send up to 10 GB</li>
+        </ul>
+        <button>Learn More</button>
+      </div>
+      <div class="master card">
+        <div class="plan">
+          <h2>Master</h2>
+          <h3 class="monthly">&dollar;39.99</h3>
+          <h3 class="annually" style="display: none;">&dollar;399.99</h3>
+        </div>
+        <ul>
+          <li>2 TB Storage</li>
+          <li>10 Users Allowed</li>
+          <li>Send up to 20 GB</li>
+        </ul>
+        <button>Learn More</button>
+      </div>
+    </div>
+
+    <div class="attribution">
+      <p>
+        Challenge by
+        <a
+          href="https://www.frontendmentor.io/challenges/pricing-component-with-toggle-8vPwRMIC"
+          target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="https://github.com/tuliosj">Your Name Here</a>.
+      </p>
+    </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="scripts.js"></script>
+</html>
