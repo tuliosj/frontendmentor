@@ -96,7 +96,7 @@ header {
 
 .feature-card {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 
   margin: 2.8rem 0;
   border-radius: 1.6rem;
