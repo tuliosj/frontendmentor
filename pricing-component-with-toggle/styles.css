@@ -57,6 +57,10 @@ h1 {
   margin: 1.2rem;
 }
 
+#y-label {
+  color: var(--light-blue);
+}
+
 input[type="checkbox"] {
   position: relative;
   -webkit-appearance: none;
@@ -90,15 +94,6 @@ input[type="checkbox"]:hover {
 }
 
 /* Cards */
-.card-container {
-  display: flex;
-  /* desktop only */
-  justify-content: center;
-  align-items: center;
-
-  margin: 4rem 1.2rem;
-}
-
 .card {
   display: flex;
   flex-direction: column;
@@ -106,16 +101,22 @@ input[type="checkbox"]:hover {
   justify-content: space-between;
 
   text-align: center;
-  min-width: 30rem;
+  max-width: 32rem;
   height: 40rem;
-  padding: 4rem;
   background-color: #fff;
   border-radius: 1rem;
 }
 
 h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 7.2rem;
   margin: 1.2rem 0;
+  color: var(--dark-blue);
+}
+h3 > span {
+  font-size: 3.2rem;
 }
 
 ul {
@@ -152,10 +153,6 @@ button:hover {
 .card:nth-child(even) {
   background: var(--grad-card);
   color: #fff;
-
-  /* desktop */
-  padding: 6rem 4rem;
-  border-radius: 1rem;
 }
 
 .card:nth-child(even) > .plan > h3 {
@@ -173,20 +170,9 @@ button:hover {
   border: 1px solid #fff;
 }
 
-/* desktop */
 .basic,
 .master {
   box-shadow: 0 0.8rem 2.5rem -0.8rem rgba(30, 30, 60, 0.1);
-}
-.basic.card {
-  border-radius: 1rem 0 0 1rem;
-}
-.master.card {
-  border-radius: 0 1rem 1rem 0;
-}
-
-h3 {
-  color: var(--dark-blue);
 }
 
 .attribution {
@@ -199,4 +185,41 @@ h3 {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 68.5em) {
+  .card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 4rem 1.2rem;
+  }
+
+  .card {
+    width: 20vw;
+    padding: 4rem;
+  }
+
+  .card:nth-child(even) {
+    padding: 6rem 4rem;
+  }
+
+  .basic.card {
+    border-radius: 1rem 0 0 1rem;
+  }
+  .master.card {
+    border-radius: 0 1rem 1rem 0;
+  }
+}
+@media (max-width: 68.49em) {
+  .card {
+    margin: 2rem 0;
+    width: 80vw;
+    padding: 4rem 5vw;
+  }
+
+  .pro {
+    box-shadow: 0 0.8rem 2.5rem -0.8rem rgba(30, 30, 60, 0.1);
+  }
 }
