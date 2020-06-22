@@ -25,6 +25,7 @@ button {
   font-weight: 700;
   border: none;
   background-color: transparent;
+  padding: 0;
 }
 
 header {
@@ -105,8 +106,8 @@ main {
 }
 
 .highlighted.card {
-  border-left: 0.8rem solid var(--dark-cyan);
-  padding-left: 2.2rem;
+  border-left: 0.4rem solid var(--dark-cyan);
+  padding-left: 2.6rem;
 }
 
 .job {
@@ -149,6 +150,7 @@ main {
 }
 
 h3 {
+  text-align: left;
   margin: 1rem 0;
   color: var(--darker-grayish-cyan);
 }
@@ -191,4 +193,58 @@ h3:hover {
   cursor: pointer;
   background-color: var(--dark-cyan);
   color: #fff;
+}
+
+@media (max-width: 68.499em) {
+  .filter {
+    width: calc(90% - 6rem);
+    flex-wrap: wrap;
+  }
+
+  .filters {
+    flex-wrap: wrap;
+  }
+
+  .item {
+    margin-bottom: 1rem;
+  }
+
+  main {
+    padding: 8rem 5% 0 5%;
+  }
+
+  .card {
+    flex-direction: column;
+    margin: 6rem 0;
+  }
+
+  .job {
+    position: relative;
+  }
+
+  .job > img {
+    position: absolute;
+    top: -6rem;
+    height: 6rem;
+  }
+
+  .description {
+    margin: 2rem 0 0 0;
+    width: 100%;
+    padding-bottom: 2rem;
+    border-bottom: 0.2rem solid var(--dark-grayish-cyan);
+  }
+
+  .description > div {
+    flex-wrap: wrap;
+  }
+
+  .description > div > span {
+    margin-top: 1rem;
+  }
+
+  .tags {
+    justify-content: flex-start;
+    margin-top: 2rem;
+  }
 }
