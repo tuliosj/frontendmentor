@@ -11,11 +11,17 @@ html,
 body {
   margin: 0;
   background-color: var(--background-grayish-cyan);
-  min-height: 100%;
+  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
   font-family: "Spartan", sans-serif;
   font-size: 1.5rem;
   color: var(--dark-cyan);
   font-weight: 700;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
 }
 
 button {
@@ -196,9 +202,6 @@ h3:hover {
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
   flex-grow: 2;
   display: flex;
   justify-content: center;
