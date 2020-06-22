@@ -195,6 +195,21 @@ h3:hover {
   color: #fff;
 }
 
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  flex-grow: 2;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 1.1rem;
+  text-align: center;
+}
+footer a {
+  color: var(--darker-grayish-cyan);
+}
+
 @media (max-width: 68.499em) {
   .filter {
     width: calc(90% - 6rem);
