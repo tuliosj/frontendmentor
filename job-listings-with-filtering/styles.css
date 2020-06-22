@@ -1,0 +1,271 @@
+:root {
+  font-size: 62.5%;
+  --dark-cyan: hsl(180, 29%, 50%);
+  --background-grayish-cyan: hsl(180, 52%, 96%);
+  --filter-grayish-cyan: hsl(180, 31%, 95%);
+  --dark-grayish-cyan: hsl(180, 8%, 52%);
+  --darker-grayish-cyan: hsl(180, 14%, 20%);
+}
+
+html,
+body {
+  margin: 0;
+  background-color: var(--background-grayish-cyan);
+  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
+  font-family: "Spartan", sans-serif;
+  font-size: 1.5rem;
+  color: var(--dark-cyan);
+  font-weight: 700;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+button {
+  font-family: "Spartan", sans-serif;
+  font-size: 1.5rem;
+  color: var(--dark-cyan);
+  font-weight: 700;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+header {
+  background-color: var(--dark-cyan);
+  background-image: url("./images/bg-header-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 15.6rem;
+  display: flex;
+  justify-content: center;
+}
+
+.filter {
+  position: absolute;
+  top: 12rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: calc(60% - 6rem);
+  padding: 1.6rem 3rem;
+  background-color: #fff;
+  border-radius: 0.4rem;
+  box-shadow: 0px 15px 25px -11px rgba(123, 142, 142, 0.25);
+  visibility: hidden;
+}
+
+.filters {
+  display: flex;
+}
+
+.item {
+  margin: 0.5rem;
+  display: flex;
+}
+
+.item > * {
+  padding: 0.8rem;
+  display: flex;
+  align-items: center;
+}
+
+.item > span {
+  background-color: var(--filter-grayish-cyan);
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+}
+
+.item > button {
+  background-color: var(--dark-cyan);
+  color: #fff;
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+}
+
+.item > button:hover {
+  cursor: pointer;
+  background-color: var(--darker-grayish-cyan);
+}
+
+#clear-all:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+main {
+  padding: 8rem 20% 0 20%;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+
+  background-color: #fff;
+  border-radius: 0.4rem;
+  padding: 3rem;
+  margin-bottom: 2rem;
+  box-shadow: 0px 15px 25px -11px rgba(123, 142, 142, 0.25);
+}
+
+.highlighted.card {
+  border-left: 0.4rem solid var(--dark-cyan);
+  padding-left: 2.6rem;
+}
+
+.job {
+  display: flex;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin-left: 2rem;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+}
+
+.top > * {
+  margin-right: 0.8rem;
+}
+
+.new,
+.featured {
+  text-transform: uppercase;
+  border-radius: 2rem;
+  padding: 0.4rem 0.8rem;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.new {
+  margin-left: 0.4rem;
+  background-color: var(--dark-cyan);
+}
+
+.featured {
+  background-color: var(--darker-grayish-cyan);
+}
+
+h3 {
+  text-align: left;
+  margin: 1rem 0;
+  color: var(--darker-grayish-cyan);
+}
+
+h3:hover {
+  cursor: pointer;
+  color: var(--dark-cyan);
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+}
+
+.bottom > span {
+  font-weight: 500;
+  color: var(--dark-grayish-cyan);
+}
+
+.dot {
+  content: "•";
+  font-size: 0.8rem;
+  margin: 0 0.8rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.tags > button {
+  margin: 0.5rem;
+  padding: 0.8rem;
+  background-color: var(--filter-grayish-cyan);
+  border-radius: 0.4rem;
+}
+
+.tags > button:hover {
+  cursor: pointer;
+  background-color: var(--dark-cyan);
+  color: #fff;
+}
+
+footer {
+  flex-grow: 2;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 1.1rem;
+  text-align: center;
+}
+footer a {
+  color: var(--darker-grayish-cyan);
+}
+
+@media (max-width: 68.499em) {
+  .filter {
+    width: calc(90% - 6rem);
+    flex-wrap: wrap;
+  }
+
+  .filters {
+    flex-wrap: wrap;
+  }
+
+  .item {
+    margin-bottom: 1rem;
+  }
+
+  main {
+    padding: 8rem 5% 0 5%;
+  }
+
+  .card {
+    flex-direction: column;
+    margin: 6rem 0;
+  }
+
+  .job {
+    position: relative;
+  }
+
+  .job > img {
+    position: absolute;
+    top: -6rem;
+    height: 6rem;
+  }
+
+  .description {
+    margin: 2rem 0 0 0;
+    width: 100%;
+    padding-bottom: 2rem;
+    border-bottom: 0.2rem solid var(--dark-grayish-cyan);
+  }
+
+  .description > div {
+    flex-wrap: wrap;
+  }
+
+  .description > div > span {
+    margin-top: 1rem;
+  }
+
+  .tags {
+    justify-content: flex-start;
+    margin-top: 2rem;
+  }
+}
